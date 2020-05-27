@@ -20,6 +20,11 @@ namespace SourceCode
             
         }
 
-       
+
+        private void btnActContra_Click(object sender, EventArgs e)
+        {
+            frmCambiarContra ventana = new frmCambiarContra(user);
+            ventana.ShowDialog();
+        }
     }
 }

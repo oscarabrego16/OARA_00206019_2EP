@@ -22,5 +22,11 @@ namespace SourceCode.Modelo
             }
             return u;
         }
+
+        public static void UpdatePass(string newPass, AppUser user)
+        {
+            string sql = String.Format("UPDATE appuser SET password = '{0}' WHERE idUser = {1};",newPass, user.idUser);
+            ConnectionDB.ExecuteNonQuery(sql);
+        }
     }
 }
