@@ -1,2 +1,1 @@
-# OARA_00206019_2EP
-Parcial 2 POO
+https://trello.com/b/zvUcjiSB/parcial-2
