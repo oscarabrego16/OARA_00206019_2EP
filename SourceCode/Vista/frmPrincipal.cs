@@ -21,6 +21,37 @@ namespace SourceCode
             dataGridView1.DataSource= dt;
             dt = ConnectionDB.ExecuteQuery("SELECT * FROM business");
             dgvNegocio.DataSource= dt;
+            dt = ConnectionDB.ExecuteQuery("SELECT b.idbusiness AS \"ID Negocio\", b.name AS \"Nombre Negocio\","+
+                                           " p.idproduct AS \"ID producto\", p.name AS \"Nombre Producto\" " +
+                                            "FROM business b, product p WHERE p.idbusiness = b.idbusiness");
+            dgvProducto.DataSource = dt;
+            
+            if(user.userType){
+                dt = ConnectionDB.ExecuteQuery("SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address "+
+                                                "FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au "+
+                                                "WHERE ao.idProduct = pr.idProduct "+
+                                                "AND ao.idAddress = ad.idAddress "+
+                                                "AND ad.idUser = au.idUser "+
+                                                $"AND au.idUser = {user.idUser};");
+               dgvOrdenes.DataSource = dt;
+               dt= ConnectionDB.ExecuteQuery("SELECT p.idproduct AS \"ID producto\", p.name AS \"Producto\", b.name AS \"Negocio\" "+
+                                             "FROM product p, business b WHERE p.idbusiness = b.idbusiness");
+               dgvNewOrder1.DataSource = dt;
+               dt= ConnectionDB.ExecuteQuery($"SELECT idaddress AS \"ID Direccion\", address AS \"Direccion\" " +
+                                             $"FROM address WHERE iduser={user.idUser};");
+               dgvNewOrder2.DataSource = dt;
+               
+            }else{
+                dt = ConnectionDB.ExecuteQuery("SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address "+
+                                                "FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au "+
+                                                "WHERE ao.idProduct = pr.idProduct "+
+                                                "AND ao.idAddress = ad.idAddress "+
+                                                "AND ad.idUser = au.idUser;");
+                dgvOrdenes.DataSource = dt;
+            }
+            
+            
+            
         }
 
 
@@ -87,8 +118,36 @@ namespace SourceCode
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message,
+                MessageBox.Show("El negocio no existe.",
                                                     "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AppOrderDAO.CrearNuevo(Convert.ToInt32(txtNewOrderIDNeg.Text), Convert.ToInt32(txtNewOrderNombre.Text));
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message,
+                    "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+        }
+
+        private void btnDelNewOrder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AppOrderDAO.EliminarOrder(Convert.ToInt32(txtDelOrderID.Text));
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("La orden no existe.",
+                                    "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
         }
