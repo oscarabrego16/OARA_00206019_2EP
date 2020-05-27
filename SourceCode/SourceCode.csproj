@@ -90,6 +90,7 @@
     <ItemGroup>
         <Compile Include="Modelo\Address.cs" />
         <Compile Include="Modelo\AddressDAO.cs" />
+        <Compile Include="Modelo\AlreadyExistingUsernameException.cs" />
         <Compile Include="Modelo\AppOrder.cs" />
         <Compile Include="Modelo\AppOrderDAO.cs" />
         <Compile Include="Modelo\AppUser.cs" />

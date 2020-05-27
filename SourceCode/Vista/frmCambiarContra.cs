@@ -34,6 +34,8 @@ namespace SourceCode
             {
                 MessageBox.Show("Las contraseñas no coindicen","Hugo App",
                     MessageBoxButtons.OK,MessageBoxIcon.Information);
+                txtPass1.Text = "";
+                txtPass2.Text = "";
             }
         }
     }
