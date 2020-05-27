@@ -16,5 +16,10 @@ namespace SourceCode
         {
             InitializeComponent();
         }
+
+        private void btnInicioSesion_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

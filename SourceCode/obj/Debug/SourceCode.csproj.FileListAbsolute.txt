@@ -1,0 +1,10 @@
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\SourceCode.exe.config
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\SourceCode.exe
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\SourceCode.pdb
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.csprojAssemblyReference.cache
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.Properties.Resources.resources
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.csproj.GenerateResource.cache
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.csproj.CoreCompileInputs.cache
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.exe
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.pdb
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.Form1.resources
