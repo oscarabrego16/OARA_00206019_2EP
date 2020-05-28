@@ -48,7 +48,7 @@ namespace SourceCode.Modelo
         public static void CrearNuevo(string fullname, string username, bool usertype)
         {
             string sql = String.Format(
-                "INSERT INTO appuser(fullname,username,password,usertype) VALUES ('{0}','{1}','{2}','{1}');",
+                "INSERT INTO appuser(fullname,username,password,usertype) VALUES ('{0}','{1}','{1}','{2}');",
                 fullname, username, usertype);
 
             ConnectionDB.ExecuteNonQuery(sql);

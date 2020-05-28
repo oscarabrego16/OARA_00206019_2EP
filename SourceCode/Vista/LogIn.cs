@@ -47,11 +47,7 @@ namespace SourceCode
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir?", 
-                "Hugo App", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+           
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)

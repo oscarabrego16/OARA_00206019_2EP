@@ -88,6 +88,16 @@ namespace SourceCode
             this.btnAddNewOrder = new System.Windows.Forms.Button();
             this.dgvNewOrder2 = new System.Windows.Forms.DataGridView();
             this.dgvNewOrder1 = new System.Windows.Forms.DataGridView();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtDelDir = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnDelDireccion = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtNewDir = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.btnAddDireccion = new System.Windows.Forms.Button();
+            this.dgvDirecciones = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -108,6 +118,10 @@ namespace SourceCode
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvNewOrder2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvNewOrder1)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvDirecciones)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBienUser
@@ -140,11 +154,13 @@ namespace SourceCode
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(20, 69);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(768, 482);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -479,6 +495,7 @@ namespace SourceCode
             this.btnEliminarProd.TabIndex = 5;
             this.btnEliminarProd.Text = "Eliminar producto";
             this.btnEliminarProd.UseVisualStyleBackColor = true;
+            this.btnEliminarProd.Click += new System.EventHandler(this.btnEliminarProd_Click);
             // 
             // groupBox6
             // 
@@ -508,9 +525,9 @@ namespace SourceCode
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (64)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
             this.label8.Location = new System.Drawing.Point(6, 71);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 41);
+            this.label8.Size = new System.Drawing.Size(111, 59);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Nombre";
+            this.label8.Text = "Nombre producto";
             // 
             // txtNegocioProd
             // 
@@ -540,6 +557,7 @@ namespace SourceCode
             this.btnAddProd.TabIndex = 4;
             this.btnAddProd.Text = "Agregar producto";
             this.btnAddProd.UseVisualStyleBackColor = true;
+            this.btnAddProd.Click += new System.EventHandler(this.btnAddProd_Click);
             // 
             // dgvProducto
             // 
@@ -718,6 +736,116 @@ namespace SourceCode
             this.dgvNewOrder1.Size = new System.Drawing.Size(349, 273);
             this.dgvNewOrder1.TabIndex = 12;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (230)))), ((int) (((byte) (255)))));
+            this.tabPage6.Controls.Add(this.groupBox9);
+            this.tabPage6.Controls.Add(this.groupBox10);
+            this.tabPage6.Controls.Add(this.dgvDirecciones);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(760, 456);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Direcciones";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.txtDelDir);
+            this.groupBox9.Controls.Add(this.label13);
+            this.groupBox9.Controls.Add(this.btnDelDireccion);
+            this.groupBox9.Location = new System.Drawing.Point(385, 268);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(361, 160);
+            this.groupBox9.TabIndex = 9;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Eliminar dirección";
+            // 
+            // txtDelDir
+            // 
+            this.txtDelDir.Location = new System.Drawing.Point(124, 51);
+            this.txtDelDir.MaxLength = 25;
+            this.txtDelDir.Name = "txtDelDir";
+            this.txtDelDir.Size = new System.Drawing.Size(141, 20);
+            this.txtDelDir.TabIndex = 10;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (64)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            this.label13.Location = new System.Drawing.Point(7, 48);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(111, 41);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "ID dirección:";
+            // 
+            // btnDelDireccion
+            // 
+            this.btnDelDireccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelDireccion.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnDelDireccion.Location = new System.Drawing.Point(98, 92);
+            this.btnDelDireccion.Name = "btnDelDireccion";
+            this.btnDelDireccion.Size = new System.Drawing.Size(113, 53);
+            this.btnDelDireccion.TabIndex = 5;
+            this.btnDelDireccion.Text = "Eliminar dirección";
+            this.btnDelDireccion.UseVisualStyleBackColor = true;
+            this.btnDelDireccion.Click += new System.EventHandler(this.btnDelDireccion_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.txtNewDir);
+            this.groupBox10.Controls.Add(this.label15);
+            this.groupBox10.Controls.Add(this.btnAddDireccion);
+            this.groupBox10.Location = new System.Drawing.Point(20, 268);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(336, 160);
+            this.groupBox10.TabIndex = 8;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Agregar dirección";
+            // 
+            // txtNewDir
+            // 
+            this.txtNewDir.Location = new System.Drawing.Point(153, 30);
+            this.txtNewDir.MaxLength = 1000;
+            this.txtNewDir.Multiline = true;
+            this.txtNewDir.Name = "txtNewDir";
+            this.txtNewDir.Size = new System.Drawing.Size(141, 115);
+            this.txtNewDir.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (64)))), ((int) (((byte) (0)))), ((int) (((byte) (64)))));
+            this.label15.Location = new System.Drawing.Point(6, 30);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(111, 41);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Dirección:";
+            // 
+            // btnAddDireccion
+            // 
+            this.btnAddDireccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDireccion.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnAddDireccion.Location = new System.Drawing.Point(6, 92);
+            this.btnAddDireccion.Name = "btnAddDireccion";
+            this.btnAddDireccion.Size = new System.Drawing.Size(113, 53);
+            this.btnAddDireccion.TabIndex = 4;
+            this.btnAddDireccion.Text = "Agregar dirección";
+            this.btnAddDireccion.UseVisualStyleBackColor = true;
+            this.btnAddDireccion.Click += new System.EventHandler(this.btnAddDireccion_Click);
+            // 
+            // dgvDirecciones
+            // 
+            this.dgvDirecciones.AllowUserToAddRows = false;
+            this.dgvDirecciones.AllowUserToDeleteRows = false;
+            this.dgvDirecciones.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (51)))), ((int) (((byte) (0)))), ((int) (((byte) (51)))));
+            this.dgvDirecciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDirecciones.Location = new System.Drawing.Point(14, 29);
+            this.dgvDirecciones.Name = "dgvDirecciones";
+            this.dgvDirecciones.ReadOnly = true;
+            this.dgvDirecciones.Size = new System.Drawing.Size(732, 221);
+            this.dgvDirecciones.TabIndex = 7;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,6 +861,8 @@ namespace SourceCode
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.Text = "Hugo App";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -762,25 +892,35 @@ namespace SourceCode
             this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dgvNewOrder2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.dgvNewOrder1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvDirecciones)).EndInit();
             this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.Button btnActContra;
+        private System.Windows.Forms.Button btnAddDireccion;
         private System.Windows.Forms.Button btnAddNegocio;
         private System.Windows.Forms.Button btnAddNewOrder;
         private System.Windows.Forms.Button btnAddProd;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnDelDireccion;
         private System.Windows.Forms.Button btnDelNewOrder;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEliminarNegocio;
         private System.Windows.Forms.Button btnEliminarProd;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDirecciones;
         private System.Windows.Forms.DataGridView dgvNegocio;
         private System.Windows.Forms.DataGridView dgvNewOrder1;
         private System.Windows.Forms.DataGridView dgvNewOrder2;
         private System.Windows.Forms.DataGridView dgvOrdenes;
         private System.Windows.Forms.DataGridView dgvProducto;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -788,10 +928,13 @@ namespace SourceCode
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -809,13 +952,16 @@ namespace SourceCode
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TextBox txtBusDesc;
         private System.Windows.Forms.TextBox txtBusID;
         private System.Windows.Forms.TextBox txtBusName;
+        private System.Windows.Forms.TextBox txtDelDir;
         private System.Windows.Forms.TextBox txtDelOrderID;
         private System.Windows.Forms.TextBox txtFullname;
         private System.Windows.Forms.TextBox txtIDProd;
         private System.Windows.Forms.TextBox txtNegocioProd;
+        private System.Windows.Forms.TextBox txtNewDir;
         private System.Windows.Forms.TextBox txtNewOrderIDNeg;
         private System.Windows.Forms.TextBox txtNewOrderNombre;
         private System.Windows.Forms.TextBox txtNombreProd;

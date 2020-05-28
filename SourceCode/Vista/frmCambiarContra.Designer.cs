@@ -45,7 +45,6 @@ namespace SourceCode
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SourceCode.Properties.Resources.PajaroHugo;
             this.pictureBox1.Location = new System.Drawing.Point(1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 126);
@@ -144,6 +143,7 @@ namespace SourceCode
             this.MinimizeBox = false;
             this.Name = "frmCambiarContra";
             this.Text = "Cambiar contraseña";
+            this.Load += new System.EventHandler(this.frmCambiarContra_Load);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

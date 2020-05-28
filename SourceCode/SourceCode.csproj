@@ -90,11 +90,11 @@
     <ItemGroup>
         <Compile Include="Modelo\Address.cs" />
         <Compile Include="Modelo\AddressDAO.cs" />
-        <Compile Include="Modelo\AlreadyExistingUsernameException.cs" />
         <Compile Include="Modelo\AppOrder.cs" />
         <Compile Include="Modelo\AppOrderDAO.cs" />
         <Compile Include="Modelo\AppUser.cs" />
         <Compile Include="Modelo\AppUserDAO.cs" />
+        <Compile Include="Modelo\BlankFieldException.cs" />
         <Compile Include="Modelo\Business.cs" />
         <Compile Include="Modelo\BusinessDAO.cs" />
         <Compile Include="Modelo\ConnectionDB.cs" />

@@ -38,5 +38,10 @@ namespace SourceCode
                 txtPass2.Text = "";
             }
         }
+
+        private void frmCambiarContra_Load(object sender, EventArgs e)
+        {
+            lblUser.Text = "Usuario " + user.userName;
+        }
     }
 }
