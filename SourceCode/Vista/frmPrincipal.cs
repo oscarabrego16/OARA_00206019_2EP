@@ -25,8 +25,8 @@ namespace SourceCode
                 tabControl1.TabPages[0].Parent = null;
                 tabControl1.TabPages[0].Parent = null;
             }else{
-            tabControl1.TabPages[4].Parent = null;
-            tabControl1.TabPages[4].Parent = null;
+                tabControl1.TabPages[4].Parent = null;
+                tabControl1.TabPages[4].Parent = null;
             }
             
             
@@ -57,8 +57,8 @@ namespace SourceCode
                dt= ConnectionDB.ExecuteQuery($"SELECT idaddress AS \"ID Direccion\", address AS \"Direccion\" " +
                                              $"FROM address WHERE iduser={user.idUser};");
                dgvNewOrder2.DataSource = dt;
-               dt= ConnectionDB.ExecuteQuery($"SELECT * FROM address" +
-                                             $"WHERE iduser={user.idUser};");
+               dt= ConnectionDB.ExecuteQuery($"SELECT * FROM address " +
+                                             $"WHERE iduser= {user.idUser};");
                dgvDirecciones.DataSource = dt;
 
             }else{
@@ -104,6 +104,7 @@ namespace SourceCode
                 AppUserDAO.EliminarUser(txtUsername2.Text);
                 MessageBox.Show("Eliminado con exito",
                     "Hugo App", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ActualizarControles();
             }
             catch (Exception exception)
             {

@@ -40,7 +40,7 @@ namespace SourceCode
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.ToString());
+                MessageBox.Show(exception.Message);
                 throw;
             }
         }
