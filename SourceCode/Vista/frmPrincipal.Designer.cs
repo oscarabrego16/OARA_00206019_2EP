@@ -98,6 +98,7 @@ namespace SourceCode
             this.label15 = new System.Windows.Forms.Label();
             this.btnAddDireccion = new System.Windows.Forms.Button();
             this.dgvDirecciones = new System.Windows.Forms.DataGridView();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -155,6 +156,7 @@ namespace SourceCode
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Location = new System.Drawing.Point(20, 69);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -846,6 +848,16 @@ namespace SourceCode
             this.dgvDirecciones.Size = new System.Drawing.Size(732, 221);
             this.dgvDirecciones.TabIndex = 7;
             // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (230)))), ((int) (((byte) (255)))));
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(760, 456);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Gráfico";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,6 +965,7 @@ namespace SourceCode
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TextBox txtBusDesc;
         private System.Windows.Forms.TextBox txtBusID;
         private System.Windows.Forms.TextBox txtBusName;

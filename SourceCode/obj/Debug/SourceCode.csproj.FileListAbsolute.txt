@@ -33,3 +33,12 @@ C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\Sour
 C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.csproj.CopyComplete
 C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.frmCambiarContra.resources
 C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\obj\Debug\SourceCode.frmPrincipal.resources
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.dll
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.pdb
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.xml
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\oara1\Desktop\Parcial 2 POO\OARA_00206019_2EP\SourceCode\bin\Debug\LiveCharts.Wpf.xml

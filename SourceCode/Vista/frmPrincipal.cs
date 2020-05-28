@@ -1,16 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using SourceCode.Modelo;
+using LiveCharts;
+using LiveCharts.Wpf;
+using CartesianChart = LiveCharts.WinForms.CartesianChart;
 
 namespace SourceCode
 {
     public partial class frmPrincipal : Form
     {
         private AppUser user;
+        private CartesianChart graficoEstadisticas;
         public frmPrincipal(AppUser pUser)
         {
             InitializeComponent();
             user = pUser;
+            if (!user.userType)
+            {
+                graficoEstadisticas = new CartesianChart();
+                this.Controls.Add(graficoEstadisticas);
+                graficoEstadisticas.Parent = tabControl1.TabPages[6];
+            }
         }
 
 
@@ -18,22 +29,42 @@ namespace SourceCode
         {
             lblBienUser.Text = "Bienvenido: " + user.userName;
             
-            ActualizarControles();
+            
             if (user.userType)
             {
+                tabControl1.TabPages[6].Parent = null;
                 tabControl1.TabPages[0].Parent = null;
                 tabControl1.TabPages[0].Parent = null;
                 tabControl1.TabPages[0].Parent = null;
+                ActualizarControles();
             }else{
                 tabControl1.TabPages[4].Parent = null;
                 tabControl1.TabPages[4].Parent = null;
+                configurarGrafico();
+                ActualizarControles();
+             
             }
             
             
         }
+        private void configurarGrafico()
+        {
+            graficoEstadisticas.Top = 10;
+            graficoEstadisticas.Left = 10;
+            graficoEstadisticas.Width = graficoEstadisticas.Parent.Width - 20;
+            graficoEstadisticas.Height = graficoEstadisticas.Parent.Height - 20;
 
+            graficoEstadisticas.Series = new SeriesCollection
+            {
+                new ColumnSeries{Title = "Negocio", Values = new ChartValues<int>(), DataLabels = true}
+            };
+            graficoEstadisticas.AxisX.Add(new Axis{Labels = new List<string>()});
+            graficoEstadisticas.AxisX[0].Separator = new Separator() {Step = 1, IsEnabled = false};
+            graficoEstadisticas.LegendLocation = LegendLocation.Top;
+        }
         private void ActualizarControles()
         {
+            
             var dt = ConnectionDB.ExecuteQuery("SELECT * FROM appuser");
             dataGridView1.DataSource= dt;
             dt = ConnectionDB.ExecuteQuery("SELECT * FROM business");
@@ -62,6 +93,7 @@ namespace SourceCode
                dgvDirecciones.DataSource = dt;
 
             }else{
+            poblarGrafico();
                 dt = ConnectionDB.ExecuteQuery("SELECT ao.idOrder, ao.createDate, pr.name, au.fullname, ad.address "+
                                                 "FROM APPORDER ao, ADDRESS ad, PRODUCT pr, APPUSER au "+
                                                 "WHERE ao.idProduct = pr.idProduct "+
@@ -70,7 +102,17 @@ namespace SourceCode
                 dgvOrdenes.DataSource = dt;
             }
         }
-
+        private void poblarGrafico()
+        {
+            graficoEstadisticas.Series[0].Values.Clear();
+            graficoEstadisticas.AxisX[0].Labels.Clear();
+            
+            foreach (Pedidos f in PedidosDAO.getEstadisticas())
+            {
+                graficoEstadisticas.Series[0].Values.Add(f.cantidad);
+                graficoEstadisticas.AxisX[0].Labels.Add(f.negocio);
+            }
+        }
         private void btnActContra_Click(object sender, EventArgs e)
         {
             frmCambiarContra ventana = new frmCambiarContra(user);
